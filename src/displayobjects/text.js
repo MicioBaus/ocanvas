@@ -1,4 +1,4 @@
-(function(oCanvas, window, document, undefined){
+(function(oCanvas, undefined){
 
 	var loadedFonts = [];
 
@@ -291,4 +291,4 @@
 	// Register the display object
 	oCanvas.registerDisplayObject("text", text, "init");
 	
-})(oCanvas, window, document);
+})(oCanvas);

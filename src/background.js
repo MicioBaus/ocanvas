@@ -1,4 +1,4 @@
-(function(oCanvas, window, document, undefined){
+(function(oCanvas, undefined){
 
 	// Define the class
 	var background = function () {
@@ -99,4 +99,4 @@
 	// Register the module
 	oCanvas.registerModule("background", background, "init");
 
-})(oCanvas, window, document);
+})(oCanvas);

@@ -1,4 +1,4 @@
-(function(oCanvas, window, document, undefined){
+(function(oCanvas, undefined){
 
 	// Define the class
 	var polygon = function (settings, thecore) {
@@ -89,4 +89,4 @@
 	// Register the display object
 	oCanvas.registerDisplayObject("polygon", polygon);
 	
-})(oCanvas, window, document);
+})(oCanvas);

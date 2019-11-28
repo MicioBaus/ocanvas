@@ -1,4 +1,4 @@
-(function(oCanvas, window, document, undefined){
+(function(oCanvas, undefined){
 
 	// Define the class
 	var tools = function () {
@@ -426,4 +426,4 @@
 	// Register the module
 	oCanvas.registerModule("tools", tools);
 
-})(oCanvas, window, document);
+})(oCanvas);

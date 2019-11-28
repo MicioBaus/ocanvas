@@ -1,4 +1,4 @@
-(function(oCanvas, window, document, undefined){
+(function(oCanvas, undefined){
 
 	// Define the class
 	var scenes = function () {
@@ -128,4 +128,4 @@
 	// Register the module
 	oCanvas.registerModule("scenes", scenes);
 
-})(oCanvas, window, document);
+})(oCanvas);

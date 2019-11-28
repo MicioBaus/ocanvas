@@ -1,4 +1,4 @@
-(function(oCanvas, window, document, undefined){
+(function(oCanvas, undefined){
 
 	// Define the class
 	var arc = function (settings, thecore) {
@@ -64,4 +64,4 @@
 	// Register the display object
 	oCanvas.registerDisplayObject("arc", arc);
 	
-})(oCanvas, window, document);
+})(oCanvas);

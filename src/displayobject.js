@@ -1,4 +1,4 @@
-(function(oCanvas, window, document, undefined){
+(function(oCanvas, undefined){
 
 	// Define the class
 	var displayObject = function () {
@@ -989,4 +989,4 @@
 		});
 	};
 
-})(oCanvas, window, document);
+})(oCanvas);

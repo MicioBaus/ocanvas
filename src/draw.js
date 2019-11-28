@@ -1,4 +1,4 @@
-(function(oCanvas, window, document, undefined){
+(function(oCanvas, undefined){
 
 	// Define the class
 	var draw = function () {
@@ -202,4 +202,4 @@
 	// Register the module
 	oCanvas.registerModule("draw", draw);
 
-})(oCanvas, window, document);
+})(oCanvas);

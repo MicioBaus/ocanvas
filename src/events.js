@@ -1,4 +1,4 @@
-(function(oCanvas, window, document, undefined){
+(function(oCanvas, undefined){
 
 	// Define the class
 	var events = function () {
@@ -406,4 +406,4 @@
 	// Register the module
 	oCanvas.registerModule("events", events, "init");
 
-})(oCanvas, window, document);
+})(oCanvas);

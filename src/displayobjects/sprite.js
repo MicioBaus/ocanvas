@@ -1,4 +1,4 @@
-(function(oCanvas, window, document, undefined){
+(function(oCanvas, undefined){
 
 	// Define the class
 	var sprite = function (settings, thecore) {
@@ -226,4 +226,4 @@
 	// Register the display object
 	oCanvas.registerDisplayObject("sprite", sprite, "init");
 	
-})(oCanvas, window, document);
+})(oCanvas);

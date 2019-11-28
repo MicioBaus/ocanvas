@@ -1,4 +1,4 @@
-version = 2.10.0
+version = 3.1.0
 source_dir = ../src/
 output_full = ocanvas-{version}.js
 output_min = ocanvas-{version}.min.js
@@ -23,9 +23,6 @@ files
 core.js
 utils.js
 timeline.js
-keyboard.js
-mouse.js
-touch.js
 tools.js
 events.js
 draw.js

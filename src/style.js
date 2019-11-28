@@ -1,4 +1,4 @@
-(function(oCanvas, window, document, undefined){
+(function(oCanvas, undefined){
 
 	// Define the class
 	var style = function () {
@@ -749,4 +749,4 @@
 	// Register the module
 	oCanvas.registerModule("style", style);
 
-})(oCanvas, window, document);
+})(oCanvas);

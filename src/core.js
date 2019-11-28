@@ -1,10 +1,10 @@
-(function(window, document, undefined){
+(function(undefined){
 
 	// Define the oCanvas object
 	var oCanvas = {
 	    
 		// Version number of this oCanvas release.
-		version: "2.10.0",
+		version: "3.1.0",
 		
 		// Array containing all canvases created by oCanvas on the current page
 		canvasList: [],
@@ -17,7 +17,7 @@
 		
 		// Object containing all the registered plugins
 		plugins: {},
-		
+
 		// Define the core class
 		core: function (options) {
 			this.isCore = true;
@@ -58,7 +58,7 @@
 
 			// Save these settings in case the core instance is reset
 			this.originalSettings = oCanvas.extend({}, this.settings);
-			
+
 			// Set canvas to specified element
 			if (this.settings.canvas.nodeName && this.settings.canvas.nodeName.toLowerCase() === "canvas") {
 				this.canvasElement = this.settings.canvas;
@@ -66,7 +66,8 @@
 			
 			// Set canvas to the element specified using a selector
 			else if (typeof this.settings.canvas === "string") {
-				this.canvasElement = document.querySelector(this.settings.canvas);
+				// this.canvasElement = document.querySelector(this.settings.canvas);
+				throw Error('string input not supported');
 			}
 			
 			// Return false if no canvas was specified
@@ -205,24 +206,24 @@
 				return true;
 			}
 
-			var checkState = function (e) {
-				if (document.readyState === "complete" || (e && e.type === "DOMContentLoaded")) {
-					oCanvas.isDomReadyListening = false;
-					oCanvas.isDomReady = true;
-					oCanvas.triggerDomReadyHandlers();
-					document.removeEventListener("readystatechange", checkState, false);
-					document.removeEventListener("DOMContentLoaded", checkState, false);
-				}
-			};
-
-			if (checkState()) {
-				return true;
-			} else if (!this.isDomReadyListening) {
-				oCanvas.isDomReadyListening = true;
-				document.addEventListener("readystatechange", checkState, false);
-				document.addEventListener("DOMContentLoaded", checkState, false);
-				return false;
-			}
+			// var checkState = function (e) {
+			// 	if (document.readyState === "complete" || (e && e.type === "DOMContentLoaded")) {
+			// 		oCanvas.isDomReadyListening = false;
+			// 		oCanvas.isDomReady = true;
+			// 		oCanvas.triggerDomReadyHandlers();
+			// 		document.removeEventListener("readystatechange", checkState, false);
+			// 		document.removeEventListener("DOMContentLoaded", checkState, false);
+			// 	}
+			// };
+			//
+			// if (checkState()) {
+			// 	return true;
+			// } else if (!this.isDomReadyListening) {
+			// 	oCanvas.isDomReadyListening = true;
+			// 	document.addEventListener("readystatechange", checkState, false);
+			// 	document.addEventListener("DOMContentLoaded", checkState, false);
+			// 	return false;
+			// }
 		},
 		isDomReady: false,
 		isDomReadyListening: false,
@@ -357,14 +358,14 @@
 			// Cut any connection to the previous canvas element by creating a new
 			// canvas. This avoids leakage in case some part of the library or a
 			// plugin is still calling things on the core instance.
-			this.canvasElement = document.createElement("canvas");
-			this.canvas = this.canvasElement.getContext("2d");
+			this.canvasElement = null;
+			this.canvas = null;
 		}
 	};
 
 	// Attach the oCanvas object to the window object for access outside of this file
-	window.oCanvas = oCanvas;
+	global.oCanvas = oCanvas;
 
 	oCanvas.domReady();
-	
-})(window, document);
+
+})();

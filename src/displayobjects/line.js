@@ -1,4 +1,4 @@
-(function(oCanvas, window, document, undefined){
+(function(oCanvas, undefined){
 
 	// Define the class
 	var line = function (settings, thecore) {
@@ -208,4 +208,4 @@
 	// Register the display object
 	oCanvas.registerDisplayObject("line", line, "init");
 	
-})(oCanvas, window, document);
+})(oCanvas);

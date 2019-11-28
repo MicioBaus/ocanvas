@@ -1,4 +1,4 @@
-(function(oCanvas, window, document, undefined){
+(function(oCanvas, undefined){
 
 	// Define the class
 	var image = function (settings, thecore) {
@@ -165,4 +165,4 @@
 	// Register the display object
 	oCanvas.registerDisplayObject("image", image, "init");
 	
-})(oCanvas, window, document);
+})(oCanvas);

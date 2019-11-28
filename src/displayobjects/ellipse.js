@@ -1,4 +1,4 @@
-(function(oCanvas, window, document, undefined){
+(function(oCanvas, undefined){
 
 	// Define the class
 	var ellipse = function (settings, thecore) {
@@ -124,4 +124,4 @@
 	// Register the display object
 	oCanvas.registerDisplayObject("ellipse", ellipse);
 	
-})(oCanvas, window, document);
+})(oCanvas);

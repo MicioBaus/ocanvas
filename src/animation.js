@@ -1,5 +1,4 @@
-(function(oCanvas, window, document, undefined){
-	window.logs = [];
+(function(oCanvas, undefined){
 
 	// Define the class
 	var animation = function () {
@@ -683,4 +682,4 @@
 	// Register the module
 	oCanvas.registerModule("animation", animation);
 
-})(oCanvas, window, document);
+})(oCanvas);

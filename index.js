@@ -12,10 +12,6 @@
 
 require('./src/core');
 require('./src/utils');
-require('./src/timeline');
-require('./src/keyboard');
-require('./src/mouse');
-require('./src/touch');
 require('./src/tools');
 require('./src/events');
 require('./src/draw');
